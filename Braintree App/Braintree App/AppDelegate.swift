@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Braintree
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,8 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        BTAppSwitch.setReturnURLScheme("com.sagarsandy492.Braintree-App.payments")
+        
+        
         // Override point for customization after application launch.
         return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        
+        if url.scheme?.localizedCaseInsensitiveCompare("com.sagarsandy492.Braintree-App.payments") == .orderedSame {
+            return BTAppSwitch.handleOpen(url, options: options)
+        }
+        return false
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

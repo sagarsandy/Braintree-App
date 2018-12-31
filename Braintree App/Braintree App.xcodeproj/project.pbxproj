@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02D84CADCFFB56E8C11081C7 /* Pods_Braintree_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2F4C94C8D9540C1093D2A4B /* Pods_Braintree_App.framework */; };
 		57E9327921D99A9E002FD2FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E9327821D99A9E002FD2FE /* AppDelegate.swift */; };
 		57E9327B21D99A9E002FD2FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E9327A21D99A9E002FD2FE /* ViewController.swift */; };
 		57E9327E21D99A9E002FD2FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57E9327C21D99A9E002FD2FE /* Main.storyboard */; };
@@ -22,6 +23,9 @@
 		57E9327F21D99A9E002FD2FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57E9328221D99A9E002FD2FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57E9328421D99A9E002FD2FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76AC1AF772EF3302CCFAC7F3 /* Pods-Braintree App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Braintree App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Braintree App/Pods-Braintree App.release.xcconfig"; sourceTree = "<group>"; };
+		AA711CD1EA8650F4E4C68EB4 /* Pods-Braintree App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Braintree App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Braintree App/Pods-Braintree App.debug.xcconfig"; sourceTree = "<group>"; };
+		B2F4C94C8D9540C1093D2A4B /* Pods_Braintree_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Braintree_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02D84CADCFFB56E8C11081C7 /* Pods_Braintree_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				57E9327721D99A9E002FD2FE /* Braintree App */,
 				57E9327621D99A9E002FD2FE /* Products */,
+				70DBEADFD9D9CBEF64A5BCDD /* Pods */,
+				D0A51FD1BEF0ECA72C715403 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = "Braintree App";
 			sourceTree = "<group>";
 		};
+		70DBEADFD9D9CBEF64A5BCDD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA711CD1EA8650F4E4C68EB4 /* Pods-Braintree App.debug.xcconfig */,
+				76AC1AF772EF3302CCFAC7F3 /* Pods-Braintree App.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D0A51FD1BEF0ECA72C715403 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2F4C94C8D9540C1093D2A4B /* Pods_Braintree_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 57E9328721D99A9E002FD2FE /* Build configuration list for PBXNativeTarget "Braintree App" */;
 			buildPhases = (
+				AE92D7E8778B17945EEE20EB /* [CP] Check Pods Manifest.lock */,
 				57E9327121D99A9E002FD2FE /* Sources */,
 				57E9327221D99A9E002FD2FE /* Frameworks */,
 				57E9327321D99A9E002FD2FE /* Resources */,
+				9BBBBEF499EE9B05B0996D62 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9BBBBEF499EE9B05B0996D62 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Braintree App/Pods-Braintree App-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Braintree/Braintree.framework",
+				"${BUILT_PRODUCTS_DIR}/BraintreeDropIn/BraintreeDropIn.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Braintree.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BraintreeDropIn.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Braintree App/Pods-Braintree App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE92D7E8778B17945EEE20EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Braintree App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		57E9327121D99A9E002FD2FE /* Sources */ = {
@@ -280,6 +347,7 @@
 		};
 		57E9328821D99A9E002FD2FE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA711CD1EA8650F4E4C68EB4 /* Pods-Braintree App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -288,7 +356,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "sagarsandy492.Braintree-App";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sagarsandy492.Braintree-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -297,6 +365,7 @@
 		};
 		57E9328921D99A9E002FD2FE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76AC1AF772EF3302CCFAC7F3 /* Pods-Braintree App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -305,7 +374,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "sagarsandy492.Braintree-App";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sagarsandy492.Braintree-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
